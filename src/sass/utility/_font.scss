@@ -1,0 +1,17 @@
+/*========================================
+
+  font utility
+
+========================================*/
+
+.u-font{
+	&-futura,
+	&-logo{
+		font-family: $base_futura;
+	}
+	
+	&-bold{
+		font-weight: bold;
+		font-weight: 700;
+	}
+}

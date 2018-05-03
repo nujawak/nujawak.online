@@ -1,0 +1,29 @@
+/*========================================
+
+  variables
+
+========================================*/
+
+/*  font
+---------------*/
+$base_font-size  : 17px;
+$base_font-weight: 500;
+$base_line-height: 1.8;
+
+$base_sans_serif : 'Open Sans', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+$base_serif      : serif;
+$base_futura     : futura, "avenir next", avenir, "Century Gothic", sans-serif;
+$base_monospace  : Menlo, Consolas, Liberation Mono, Courier, monospace;
+
+/*  colors
+---------------*/
+$base_color_text: #4c555a;
+$base_color_link: #008cdd;
+$base_color_bg  : #f5f7f9;
+
+$feature_color_code: #ef964c;
+
+
+/*  content width
+---------------*/
+$max_content_width: 45em;

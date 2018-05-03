@@ -1,0 +1,35 @@
+/*========================================
+
+  mixin
+
+========================================*/
+
+/**
+ * fixed aspect ratio
+ * 
+ * example)
+ * @include fixed-aspect-ratio('iframe', 16, 9, iframe);
+ * @include fixed-aspect-ratio('block', 4, 3);
+ * 
+ */
+@mixin fixed-aspect-ratio( $type, $width, $height, $child: '> *' ){
+	position: relative;
+	width: 100%;
+	&:before{
+		content:"";
+		display: block;
+		padding-top: $height / $width * 100%;
+	}
+	#{$child}{
+		position: absolute;
+		top: 0;
+		left: 0;
+		@if 'iframe' == $type {
+			width: 100%;
+			height: 100%;
+		} @else {
+			bottom: 0;
+			right: 0;
+		}
+	}
+}

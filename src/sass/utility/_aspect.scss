@@ -1,0 +1,23 @@
+/*========================================
+
+  fixed aspect ratio
+
+========================================*/
+
+.u-aspect{
+	&-youtube{
+		@include fixed-aspect-ratio('iframe', 16, 9, 'iframe');
+	}
+	&-16x9{
+		@include fixed-aspect-ratio('block', 16, 9);
+	}
+	&-4x3{
+		@include fixed-aspect-ratio('block', 4, 3);
+	}
+	&-2x1{
+		@include fixed-aspect-ratio('block', 2, 1);
+	}
+	&-1x1{
+		@include fixed-aspect-ratio('block', 1, 1);
+	}
+}

@@ -1,0 +1,36 @@
+/*========================================
+
+  initialize
+
+========================================*/
+
+body{
+	font-family: $base_sans_serif;
+	font-size  : $base_font-size;
+	font-weight: $base_font-weight;
+	line-height: $base_line-height;
+	color      : $base_color_text;
+	background : $base_color_bg;
+	box-sizing : border-box;
+}
+
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+
+a{
+	color: $base_color_link;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+table{
+	width: 100%;
+}
+
+td{
+	padding: 1em 2em;
+}

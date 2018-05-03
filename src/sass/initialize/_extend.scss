@@ -1,0 +1,24 @@
+/*========================================
+
+  extend
+
+========================================*/
+
+/*  before/after
+---------------*/
+%before_after_base{
+	content: '';
+	display: block;
+	position: absolute;
+}
+
+
+/*  content witdh
+---------------*/
+%content-width{
+	width: 100%;
+	max-width: $max_content_width;
+	margin: 0 auto;
+	padding-left: 1em;
+	padding-right: 1em;
+}
