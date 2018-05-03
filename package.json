@@ -1,0 +1,30 @@
+{
+  "name": "nujawak.online",
+  "version": "1.0.0",
+  "description": "WordPress theme for nujawak.online",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nujawak/nujawak.online.git"
+  },
+  "author": "nujawak <nujawak.online@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nujawak/nujawak.online/issues"
+  },
+  "homepage": "https://github.com/nujawak/nujawak.online#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-uglify": "^3.0.0"
+  }
+}
