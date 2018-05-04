@@ -5,5 +5,25 @@
 ========================================*/
 
 .p-home{
-	
+	&{
+		display: flex;
+		flex-direction : column;
+		justify-content: center;
+		align-items    : center;
+		align-content  : center;
+		height: 100vh;
+	}
+	&__logo{
+		width: 90%;
+		max-width: 320px;
+	}
+}
+
+body.home{
+	.c-header{
+		display: none;
+	}
+	.c-footer__logo{
+		display: none;
+	}
 }
