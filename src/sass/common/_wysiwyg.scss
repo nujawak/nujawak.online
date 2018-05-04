@@ -34,6 +34,10 @@
 		margin: 2em 0 0.6em;
 		font-size: 1.1em;
 	}
+	h5,
+	h6{
+		margin: 2em 0 0.6em;
+	}
 	p{
 		margin: 0 0 1.2em;
 	}
@@ -114,16 +118,13 @@
 	code{
 		padding: 0.2em 0.5em;
 		font-size: 0.8em;
-		font-family: Menlo, Consolas,Liberation Mono,Courier,monospace;
+		font-family: $base_monospace;
 		word-break: break-all;
-		color: #ef964c;
+		color: $feature_color_code;
 		background: #fafafa;
 	}
-	> p code, 
-	li code{
-	}
 	pre{
-		font-family: Menlo, Consolas,Liberation Mono,Courier,monospace;
+		font-family: $base_monospace;
 		line-height: 1.5;
 		background: #fafafb;
 		> *:last-child{
@@ -151,7 +152,7 @@
 		table thead,
 		table caption,
 		textarea {
-			font-family: Menlo, Consolas,Liberation Mono,Courier,monospace;
+			font-family: $base_monospace;
 			font-size: 0.8rem;
 			line-height: 1.6;
 			background: none;
