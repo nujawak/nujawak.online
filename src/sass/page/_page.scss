@@ -5,5 +5,19 @@
 ========================================*/
 
 .p-page{
-	
+	&__panel{
+		@extend .p-single__panel;
+	}
+	&__thumb{
+		@extend .p-single__thumb;
+	}
+	&__header{
+		@extend .p-single__header;
+	}
+	&__title{
+		@extend .p-single__title;
+	}
+	&__content{
+		@extend .p-single__content;
+	}
 }
