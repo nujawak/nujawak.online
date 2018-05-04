@@ -6,7 +6,10 @@
 
 .c-footer{
 	& {
-		
+		width: 100%;
+		max-width: 60em;
+		margin: 0 auto;
+		padding: 4em 0 1em;
 	}
 	&__logo{
 		text-align: center;
