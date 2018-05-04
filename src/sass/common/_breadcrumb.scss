@@ -5,5 +5,37 @@
 ========================================*/
 
 .c-breadcrumb{
-	
+	&{
+		text-align: center;
+	}
+	&__list{
+		width: 100%;
+		max-width: 60em;
+		margin: 0 auto;
+		padding: 0;
+		list-style: none;
+	}
+	&__item{
+		display: inline-block;
+		font-size: 0.8em;
+		max-width: 20em;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		br{
+			display: none;
+		}
+		& + &{
+			&:before{
+				content: '›';
+				margin: 0 0.6em 0 0.1em;
+			}
+		}
+		a{
+			display: inline-block;
+			&:first-letter{
+				text-transform: uppercase;
+			}
+		}
+	}
 }

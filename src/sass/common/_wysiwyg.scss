@@ -5,5 +5,171 @@
 ========================================*/
 
 .c-wysiwyg{
-	
+	&{
+		text-align: justify;
+	}
+	& > *:last-child{
+		margin-bottom: 0;
+	}
+	h1{
+		margin: 2em 0 0.6em;
+	}
+	h2{
+		margin: 2em 0 0.6em;
+	}
+	h3{
+		position: relative;
+		margin: 2em 0 0.6em;
+		font-size: 1.25em;
+		&:before{
+			@extend %before_after_base;
+			width: 5px;
+			height: 1em;
+			top: 0.45em;
+			left: -1em;
+			background: $base_color_text;
+		}
+	}
+	h4{
+		margin: 2em 0 0.6em;
+		font-size: 1.1em;
+	}
+	p{
+		margin: 0 0 1.2em;
+	}
+	ol, ul{
+		margin: 1.2em 0 1.2em 1.5em;
+		padding: 0;
+	}
+	blockquote{
+		position: relative;
+		margin: 1em 0;
+		padding: 1em 1.5em 1em 3em;
+		font-size: 0.9em;
+		font-style: italic;
+		border: 1px solid #d8d9da;
+		&:before{
+			content: "“";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-family: "Georgia";
+			font-size: 3em;
+			font-weight: bold;
+			line-height: 1;
+			color: #d8d9da;
+		}
+		> *:last-child{
+			margin-bottom: 0;
+		}
+		p{
+			margin: 0 0 0.5em;
+		}
+		cite{
+			font-size: 0.9em;
+			&:before{
+				content: "– ";
+			}
+		}
+	}
+	table{
+		margin: 0 0 1.2em;
+		border: 1px solid #f0f2f3;
+		border-collapse: collapse;
+	}
+	td{
+		padding: 1em;
+		border: 1px solid #f0f2f3;
+		vertical-align: top;
+	}
+	figcaption{
+		font-size: 0.7em;
+		font-style: italic;
+		line-height: 1.2;
+		text-align: right;
+	}
+	aside{
+		margin: 1em 0;
+		padding: 1em;
+		font-size: 0.8em;
+		background: #fafafb;
+		border: 1px solid #f0f2f3;
+		ul, ol{
+			margin-left: 1em;
+		}
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+		q{
+			display: inline-block;
+			margin: 1em 0;
+			font-style: italic;
+			&:before,
+			&:after{
+				content: "\"";
+			}
+		}
+	}
+	code{
+		padding: 0.2em 0.5em;
+		font-size: 0.8em;
+		font-family: Menlo, Consolas,Liberation Mono,Courier,monospace;
+		word-break: break-all;
+		color: #ef964c;
+		background: #fafafa;
+	}
+	> p code, 
+	li code{
+	}
+	pre{
+		font-family: Menlo, Consolas,Liberation Mono,Courier,monospace;
+		line-height: 1.5;
+		background: #fafafb;
+		> *:last-child{
+			margin-bottom: 0;
+		}
+	}
+	> pre{
+		padding: 1em;
+	}
+	.syntaxhighlighter{
+		&{
+			margin: 1.2em 0;
+			border: 1px solid #ccc;
+		}
+		.line:nth-of-type(2n){
+			background: #fafafb;
+		}
+		a,
+		div,
+		code,
+		table,
+		table td,
+		table tr,
+		table tbody,
+		table thead,
+		table caption,
+		textarea {
+			font-family: Menlo, Consolas,Liberation Mono,Courier,monospace;
+			font-size: 0.8rem;
+			line-height: 1.6;
+			background: none;
+		}
+		code{
+			padding: 0;
+		}
+		table{
+			margin: 0;
+			border: none;
+		}
+		table caption{
+			color: #fff;
+			background: #707070;
+		}
+	}
+	.type-wide{
+		width: calc(100% + 5em);
+		transform: translate(-2.5em);
+	}
 }
