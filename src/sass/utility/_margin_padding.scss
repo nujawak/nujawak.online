@@ -4,6 +4,44 @@
 
 ========================================*/
 
-.u-{
-	
+$u-margin: (
+	0  : 0,
+	XXS: 0.3em,
+	XS : 0.5em,
+	S  : 1em,
+	M  : 2em,
+	L  : 3em,
+	XL : 5em,
+	XXL: 8em,
+);
+@each $key, $value in $u-margin {
+	@each $property in margin, padding {
+		$first-letter: str-slice($property, 1, 1);
+		
+		// .u-m-$key
+		// .u-p-$key
+		.u-#{$first-letter}-#{$key} {
+			#{$property}: $value;
+		}
+		// .u-mt-$key
+		// .u-pt-$key
+		.u-#{$first-letter}t-#{$key} {
+			#{$property}-top: $value;
+		}
+		// .u-mr-$key
+		// .u-pr-$key
+		.u-#{$first-letter}r-#{$key} {
+			#{$property}-right: $value;
+		}
+		// .u-mb-$key
+		// .u-pb-$key
+		.u-#{$first-letter}b-#{$key} {
+			#{$property}-bottom: $value;
+		}
+		// .u-ml-$key
+		// .u-pl-$key
+		.u-#{$first-letter}l-#{$key} {
+			#{$property}-left: $value;
+		}
+	}
 }
