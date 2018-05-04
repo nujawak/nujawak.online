@@ -14,12 +14,6 @@
 	<main id="post-<?php the_ID(); ?>" <?php post_class('p-single'); ?>>
 		<article class="p-single__panel">
 
-			<?php if ( get_the_post_thumbnail() ) :?>
-				<figure class="p-single__thumb">
-					<?php the_post_thumbnail(); ?>
-				</figure>
-			<?php endif; ?>
-
 			<header class="p-single__header">
 				<h1 class="p-single__title"><?php the_title(); ?></h1>
 				<div class="p-single__meta">
@@ -27,6 +21,12 @@
 					<p class="p-single__categories"><?php the_category( ', ' ); ?></p>
 				</div><!-- p-single__meta -->
 			</header>
+
+			<?php if ( get_the_post_thumbnail() ) :?>
+				<figure class="p-single__thumb">
+					<?php the_post_thumbnail(); ?>
+				</figure>
+			<?php endif; ?>
 
 			<div class="p-single__content">
 				<?php the_content(); ?>
