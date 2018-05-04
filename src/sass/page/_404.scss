@@ -5,5 +5,17 @@
 ========================================*/
 
 .p-404{
-	
+	& {
+		display: flex;
+		flex-direction : column;
+		justify-content: center;
+		align-items    : center;
+		align-content  : center;
+		height: 50vh;
+	}
+	&__title{
+		font-family: $base_futura;
+		font-weight: 700;
+		
+	}
 }

@@ -9,4 +9,8 @@
 ?>
 <?php get_header(); ?>
 
+<div class="p-404">
+	<h1 class="p-404__title">404 not found</h1>
+</div><!-- p-404 -->
+
 <?php get_footer(); ?>
