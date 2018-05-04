@@ -6,7 +6,7 @@
 ?>
 
 <footer class="c-footer">
-	<h3 class="c-footer__logo"><?php bloginfo( 'name' ); ?></h3>
+	<h3 class="c-footer__logo"><?php nujawak_the_homelink(); ?></h3>
 	
 	<nav class="c-footer__nav">
 		<ul class="c-footer__links">
