@@ -16,5 +16,5 @@
 <body <?php body_class(); ?>>
 
 <header class="c-header">
-	<h2 class="c-header__logo u-font-futura"><?php bloginfo( 'name' ); ?></h2>
+	<h2 class="c-header__logo"><?php nujawak_the_homelink(); ?></h2>
 </header>
