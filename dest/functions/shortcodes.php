@@ -6,14 +6,16 @@
 add_shortcode( 'list_programming_categories', function( $user_atts = array() ){
 	// set params
 	$user_atts = shortcode_atts( array(
-		'class_ul' => '',
-		'class_li' => '',
+		'class_ul' => 'c-categories',
+		'class_li' => 'c-categories__item',
 	), $user_atts );
 
 	// init
-	$output     = '';
+	$format_ul  = '<ul class="%1$s">%2$s</ul>';
+	$format_li  = '<li class="%1$s">%2$s</li>';
+	$format_a   = '<a href="%1$s">%2$s</a>';
+	$list_items = ''; // output HTML li
 	$categories = get_categories( array(
-		'type'       => 'post',
 		'child_of'   => (int)get_cat_id( 'プログラミング' ),
 		'hide_empty' => false,
 		) );
@@ -21,24 +23,24 @@ add_shortcode( 'list_programming_categories', function( $user_atts = array() ){
 	// 
 	if ( ! empty($categories) ) :
 		foreach ( $categories as $category ) :
-			$li_class = 'cat-item cat-' . $category->slug . ' ' . $user_atts['class_li'];
+			$li_class = (string)$user_atts['class_li'];
 			$li_link  = get_category_link( $category->term_id );
-			
+			$li_inner = sprintf($format_a, $li_link, $category->name);
+
+			// empty category
 			if ( 0 === $category->count ) :
-				$li_class = 'cat-empty ' . $li_class;
-				$li_inner = $category->name;
-			else:
-				$li_inner = sprintf('<a href="%1$s">%2$s</a>', $li_link, $category->name);
+				$li_inner = $category->name; // override
 			endif;
 
-			$output .= sprintf('<li class="%1$s">%2$s</li>', $li_class, $li_inner);
+			// append
+			$list_items .= sprintf($format_li, $li_class, $li_inner);
 		endforeach;
 	else:
-		$output .= '<li class="cat-item cat-not-found">post not found.</li>';
+		$list_items = sprintf($format_li, 'cat-not-found', 'post not found.');
 	endif;
 
-	// 
-	return '<ul class="cat-list ' . $user_atts['class_ul'] . '">' . $output . '</ul>';
+	// return
+	return sprintf($format_ul, (string)$user_atts['class_ul'], $list_items);
 });
 
 
@@ -63,5 +65,5 @@ add_shortcode( 'youtube', function( $user_atts = array() ){
 		$user_atts[$key] = esc_attr( $value );
 	endforeach;
 	
-	return sprintf('<%1$s class="u-youtube %2$s"><iframe src="https://www.youtube.com/embed/%3$s?rel=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe></%1$s>', $user_atts['wrap'], $user_atts['class'], $user_atts['video_id']);
+	return sprintf('<%1$s class="u-aspect-youtube %2$s"><iframe src="https://www.youtube.com/embed/%3$s?rel=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe></%1$s>', $user_atts['wrap'], $user_atts['class'], $user_atts['video_id']);
 });
