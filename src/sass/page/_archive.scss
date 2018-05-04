@@ -5,5 +5,66 @@
 ========================================*/
 
 .p-archive{
-	
+	&__header{
+		text-align: center;
+	}
+	&__title{
+		font-weight: normal;
+		letter-spacing: 0.1em;
+	}
+	&__content{
+		
+	}
+	&-item{
+		& {
+			@extend .c-panel;
+		}
+		&__header{
+			margin: 0 0 1.5em;
+		}
+		&__title{
+			margin: 0;
+			
+			br{
+				display: none;
+			}
+		}
+		&__meta{
+			font-size: 0.8em;
+		}
+		&__time{
+			
+		}
+		&__categories{
+			position: relative;
+			display: inline-block;
+			margin: 0 0 0 0.2em;
+			padding: 0 0 0 0.7em;
+			
+			&:before{
+				@extend %before_after_base;
+				font-size: 0;
+				line-height: 0;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto;
+				width: 3px;
+				height: 3px;
+				background: $base_color_text;
+				border-radius: 100%;
+			}
+		}
+		&__content{
+			
+		}
+		&__link{
+			&:after{
+				content: '»';
+				display: inline-block;
+				margin: 0 0.5em;
+				text-decoration: none;
+			}
+		}
+	}
 }
