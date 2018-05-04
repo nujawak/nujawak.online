@@ -33,7 +33,7 @@ add_action( 'wp_enqueue_scripts', function(){
 	if ( is_singular( 'post' ) ) :
 		wp_enqueue_script(
 			'SyntaxHighlighter',
-			get_stylesheet_directory_uri() . '/lib/SyntaxHighlighter/syntaxhighlighter.js',
+			get_stylesheet_directory_uri() . '/libraries/SyntaxHighlighter/syntaxhighlighter.js',
 			'',
 			'4.0',
 			true
