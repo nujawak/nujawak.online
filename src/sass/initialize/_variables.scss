@@ -27,3 +27,10 @@ $feature_color_code: #ef964c;
 /*  content width
 ---------------*/
 $max_content_width: 40em;
+
+/*  media query breakpoint
+---------------*/
+$breakpoint_small : 36em;
+$breakpoint_middle: $breakpoint_small * 1.5;
+
+

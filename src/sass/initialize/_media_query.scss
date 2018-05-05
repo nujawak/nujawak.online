@@ -1,0 +1,23 @@
+/*========================================
+
+  media query
+
+========================================*/
+
+@mixin mq_small() {
+	@media (max-width: #{$breakpoint_small}) {
+		@content;
+	}
+}
+
+@mixin mq_middle() {
+	@media (max-width: #{$breakpoint_middle}) {
+		@content;
+	}
+}
+
+@mixin mq_large() {
+	@media (min-width: #{$breakpoint_middle}) {
+		@content;
+	}
+}

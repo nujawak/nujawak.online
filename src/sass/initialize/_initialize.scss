@@ -12,6 +12,10 @@ body{
 	color      : $base_color_text;
 	background : $base_color_bg;
 	box-sizing : border-box;
+	
+	@include mq_small() {
+		font-size: 13px;
+	};
 }
 
 *, *:before, *:after{

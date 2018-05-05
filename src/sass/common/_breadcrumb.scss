@@ -7,6 +7,11 @@
 .c-breadcrumb{
 	&{
 		text-align: center;
+		
+		@include mq_small() {
+			padding: 0 1.5em;
+			text-align: left;
+		};
 	}
 	&__list{
 		width: 100%;
