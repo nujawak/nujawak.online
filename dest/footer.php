@@ -14,6 +14,7 @@
 			<li class="c-footer__link"><a href="/blog/">blog</a></li>
 			<li class="c-footer__link"><a href="mailto:nujawak.online@gmail.com">contact</a></li>
 			<li class="c-footer__link"><a href="https://github.com/nujawak/">GitHub</a></li>
+			<li class="c-footer__link"><a href="/utaa/">UTAA</a></li>
 		</ul>
 	</nav>
 	
